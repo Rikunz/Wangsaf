@@ -1,0 +1,9 @@
+#WANGSAF BOT
+Step :
+1. run "npm i" in the terminal in the same folder of package.json
+2. create lastPost.json and enter {}, if lastPost.json doesn't exist 
+3. edit the .env with your own username Ig and Password and enter randomly string device up to you
+4. run the app with "npm start" in the terminal
+
+You may read the code easily with main.js structure
+but the stable one is index.js with the entire of the code in the same file
