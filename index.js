@@ -27,7 +27,7 @@ function wait(ms) {
 
 async function login() {
   await ig.account.login("seithaaaaaa", "Thor1414");
-  console.log("Logged in!");
+  console.log("Logged in intagram!");
 }
 
 async function fetchLatestPosts(username, targetPost, targetUserId = 0) {
@@ -91,9 +91,9 @@ async function Run(client) {
       lastPost[account] = data.postId;
       for (let i = 0; i <= data.images.length; i++) {
         if (data.images.length == i) {
-          await client.sendMessage(`6281220884573@c.us`, data.text);
+          await client.sendMessage(groupId, data.text);
         } else {
-          await client.sendMessage(`6281220884573@c.us`, await MessageMedia.fromUrl(data.images[i]), { unsafeMime: true, filename: `${i}.jpg` });
+          await client.sendMessage(groupId, await MessageMedia.fromUrl(data.images[i]), { unsafeMime: true, filename: `${i}.jpg` });
         }
       }
       await wait(1000);
@@ -105,15 +105,14 @@ async function Run(client) {
   console.log(lastPost);
 }
 const sites = {
-  'figureconsign': 2, 'consigngaming': 2, 'chemicy.consignment': 3, 'gametech_com': 2, 'thelazytitip': 3, 'gamertown.id': 0
+  'figureconsign': 0, 'consigngaming': 0, 'chemicy.consignment': 3, 'gametech_com': 2, 'thelazytitip': 0, 'gamertown.id': 0
 }
 const sitesId = {
   'figureconsign': 45077315629, 'consigngaming': 9912532974, 'chemicy.consignment': 18374626902, 'gametech_com': 32565424389, 'thelazytitip': 36062233574, 'gamertown.id': 27995301463
 }
+
 const ig = new IgApiClient();
 ig.state.generateDevice("seith");
-
-
 
 
 const intervalSeconds = 120;
